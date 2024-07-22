@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        Memory Game
+    </header>
+    <!-- start setting box -->
+    <div class="setting-box">
+        <div class="toggle-settings">
+            <i class="fa fa-gear "></i>
+        </div>
+        <div class="setting-container">
+            <div class="option-box">
+                <h4>Volume</h4>
+                <div class="vloume">
+                    <span class="yes active" data-background="yes">On</span>
+                    <span class="no"data-background="no">Mute</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end setting box -->
+    <div class="control-buttons">
+        <span>Start Game</span>
+    </div>
+    <div class="info-container">
+        <div class="name">
+            Hello: <span></span>
+        </div>
+        <div class="tries">
+            Wrong Tries: <span>0</span>
+        </div>
+    </div>
+    <div class="memory-game-blocks" >
+        <div class="game-block"data-technology="angular">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/angular2.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-technology="angular">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/angular2.png" alt="">
+            </div>
+        </div>
+        <div class="game-block"data-technology="css">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/css.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-technology="css">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/css.png" alt="">
+            </div>
+        </div>
+        <div class="game-block"data-technology="html">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/html.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-technology="html">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/html.png" alt="">
+            </div>
+        </div>
+        <div class="game-block"data-technology="js">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/js.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-technology="js">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/js.png" alt="">
+            </div>
+        </div>
+        <div class="game-block"data-technology="python">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/python.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-technology="python">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/python.png" alt="">
+            </div>
+        </div>
+        <div class="game-block"data-technology="php">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/php.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-technology="php">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/php.png" alt="">
+            </div>
+        </div>
+        <div class="game-block"data-technology="react">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/react.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-technology="react">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/react.png" alt="">
+            </div>
+        </div>
+        <div class="game-block"data-technology="laravel">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/laravel.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-technology="laravel">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/laravel.png" alt="">
+            </div>
+        </div>
+        <div class="game-block"data-technology="jquery">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/jquery.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-technology="jquery">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/jquery.png" alt="">
+            </div>
+        </div>
+        <div class="game-block"data-technology="vue">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/vue.png" alt="">
+            </div>
+        </div>
+        <div class="game-block" data-technology="vue">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="imgs/vue.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="score">
+        Congartulation you Got <span>0</span> of <span class="num-blocks"></span>
+    </div>
+
+    <audio id="success" src="audio/success-1-6297.mp3" preload="auto"></audio>
+    <audio id="wrong" src="audio/failure-drum-sound-effect-2-7184.mp3"preload="auto"></audio>
+    <!-- <audio id="lose" src="audio/surprise-sound-effect-99300.mp3"preload="auto"></audio> -->
+    <audio id="click" src="audio/sound-1-167181.mp3"preload="auto"></audio>
+    <audio id="final" src="audio/GDCJY8U-success.mp3"preload="auto"></audio>
+    
+    <footer class="footer">This Page Created by <span>Issam Mohamed </span> &#169 2024</footer>
+    <script src="main.js"></script>
+</body>
+</html>

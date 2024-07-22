@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Tahoma, sans-serif;
+}
+header {
+    background-color: #0075ff; 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+    font-size: 24px;
+    font-weight: bold; 
+    text-transform: uppercase; 
+    max-width: 1085px;
+    left: 9%;
+    position: relative;
+    border-radius: 5px;
+}
+
+.setting-box{
+    position: fixed;
+    left: -210px;
+    top: 0;
+    padding-top:10px;
+    padding-left:10px;
+    background-color: #FFF;
+    width: 200px;
+    z-index: 1000;
+    min-height: 100vh ;
+    transition: 0.3s;
+    border: 1px solid #EEE;
+    .option-box {
+        padding: 10px;
+        text-align: center;
+        background-color: #999;
+        margin: 10px;
+    }
+    .toggle-settings {
+        position: absolute;
+        right: -40px;
+        top: 15%;
+        background-color: #333;
+        text-align: center;
+        cursor: pointer;
+        .fa-gear {
+            width: 40px;
+            padding: 8px 0;
+        }
+        }
+    .setting-container{
+        .option-box {
+            padding: 20px;
+            h4{
+                margin: 0;
+                color: #1d1d1d;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.setting-container .option-box .yes,
+.setting-container .option-box .no{
+    width: 60px;
+    background-color: #333;
+    color:#fff;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    padding: 3px 10px;
+    border-radius: 4px;
+    opacity: 0.5;
+}
+.setting-box .option-box span.active {
+    opacity: 1;
+}
+.setting-container .option-box .yes{
+    background-color: #01cab6;
+}
+.setting-container .option-box .no{
+    background-color: #a50e03;
+}
+.open{
+    left: 0;
+}
+/* end setting box */
+.control-buttons {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(3, 169, 244, 0.9);
+}
+.control-buttons span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F44336;
+    color: #FFF;
+    padding: 15px 25px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.info-container {
+    width: 1080px;
+    margin: 20px auto 0;
+    background-color: #F6F6F6;
+    padding: 20px;
+    font-size: 24px;
+    overflow: hidden;
+    border: 2px solid #2196f3;
+    border-radius: 5px;
+
+}
+
+.info-container .name {
+    float: left;
+    width: 50%;
+}
+.info-container .tries {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+.memory-game-blocks {
+    display: flex;
+    width: 1100px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.memory-game-blocks.no-clicking {
+    pointer-events: none;
+}
+.memory-game-blocks .game-block {
+    height: 200px;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    flex: 1 0 200px;
+    margin: 0 10px 20px;
+}
+.memory-game-blocks .game-block .front {
+    background-color: #333;
+    line-height: 200px;
+}
+.memory-game-blocks .game-block .front:before {
+    content: '!';
+    color: #FFF;
+    font-size: 140px;
+    font-weight: bold;
+}
+.memory-game-blocks .game-block .back {
+    line-height: 200px;
+    transform: rotateY(180deg);
+}
+.memory-game-blocks .game-block .back img {
+    width: 140px;
+    height: 140px;
+    margin-top: 30px;
+}
+.memory-game-blocks .game-block .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    border: 5px solid #2196F3;
+}
+.score{
+    width: 1080px;
+    margin: 20px auto 0;
+    background-color: #F6F6F6;
+    padding: 20px;
+    font-size: 24px;
+    overflow: hidden;
+    border: 2px solid #2196f3;
+    text-align: center;
+    border-radius: 5px;
+
+}
+.memory-game-blocks .game-block.is-flipped,
+.memory-game-blocks .game-block.has-match {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+.footer {
+    max-width: 1090px;
+    left: 9%;
+    position: relative;
+    margin-top: 20px;
+    background-color: #333;
+    color: #EEE;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 5px;
+
+    span{
+        font-size: 20px;
+        color:#0075ff;
+    }
+}
